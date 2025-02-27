@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reddit Clone - Fabulous Edition</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <div class="logo">
+          <img src="reddit.logo.png" alt="Reddit Logo" />
+          <h1>Reddit Clone</h1>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="Search Reddit" />
+        </div>
+        <div class="auth-buttons">
+          <button class="btn-register" onclick="showRegisterForm()">
+            Register
+          </button>
+          <button class="btn-login" onclick="showLoginForm()">Login</button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <!-- Sidebar -->
+        <aside>
+          <div class="topics">
+            <h2>Topics</h2>
+            <ul id="subreddit-list"></ul>
+          </div>
+          <div class="trending">
+            <h2>Trending Now</h2>
+            <ul id="trending-list">
+              <li>#AIRevolution</li>
+              <li>#SpaceXLaunch</li>
+              <li>#CryptoNews</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <section class="main-content">
+          <!-- Post Form -->
+          <div id="post-form" class="hidden">
+            <h2>Create a Post</h2>
+            <input type="text" id="post-title" placeholder="Title" />
+            <textarea id="post-content" placeholder="Content"></textarea>
+            <select id="subreddit"></select>
+            <button class="btn-post" onclick="createPost()">Post</button>
+          </div>
+
+          <!-- Posts -->
+          <div id="posts"></div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+      </footer>
+
+      <!-- Modals -->
+      <div id="register-form" class="modal hidden">
+        <h2>Register</h2>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <input type="file" id="avatar" accept="image/*" />
+        <button class="btn-register" onclick="register()">Register</button>
+      </div>
+
+      <div id="login-form" class="modal hidden">
+        <h2>Login</h2>
+        <input type="text" id="login-username" placeholder="Username" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button class="btn-login" onclick="login()">Login</button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,336 @@
+/* General Styles */
+:root {
+    --primary: #ff4500;
+    --secondary: #0079d3;
+    --background: #1a1a1b;
+    --text: #ffffff;
+    --text-secondary: #d7dadc;
+    --card-bg: #2d2d2e;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header, main, footer {
+    padding: 20px;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    color: var(--primary);
+  }
+  
+  .search input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-register {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .btn-login {
+    background-color: var(--secondary);
+    color: white;
+  }
+  
+  .auth-buttons button:hover {
+    opacity: 0.9;
+  }
+  
+  main {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+  }
+  
+  aside {
+    width: 250px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  
+  .topics h2, .trending h2 {
+    margin-top: 0;
+    color: var(--primary);
+  }
+  
+  .topics ul, .trending ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .topics li, .trending li {
+    margin: 10px 0;
+  }
+  
+  .topics a, .trending li {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .topics a:hover, .trending li:hover {
+    color: var(--primary);
+  }
+  
+  .main-content {
+    flex: 1;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  
+  .post {
+    background-color: var(--background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  
+  .post h3 {
+    margin-top: 0;
+    color: var(--primary);
+  }
+  
+  .post p {
+    color: var(--text-secondary);
+  }
+  
+  .timestamp {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .comment {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border-radius: 5px;
+  }
+  
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .comment-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .btn-post {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-post:hover {
+    opacity: 0.9;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+  }
+  
+  .modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .footer {
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+  
+  .footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+  }
+  
+  .footer a:hover {
+    color: var(--primary);
+  }
+  
+  .hidden {
+    display: none;
+  }  
+  .post {
+    background-color: var(--background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+  }
+  
+  .post h3 {
+    margin-top: 0;
+    color: var(--primary);
+  }
+  
+  .post p {
+    color: var(--text-secondary);
+  }
+  
+  .timestamp {
+    color: #888;
+    font-size: 14px;
+  }
+  
+  .comment {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--card-bg);
+    border-radius: 5px;
+  }
+  
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .comment-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .btn-post {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-post:hover {
+    opacity: 0.9;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+  }
+  
+  .modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .footer {
+    background-color: var(--card-bg);
+    color: var(--text-secondary);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+  }
+  
+  .footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+  }
+  
+  .footer a:hover {
+    color: var(--primary);
+  }
+  
+  .hidden {
+    display: none;
+  }
